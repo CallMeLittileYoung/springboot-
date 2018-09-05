@@ -1,0 +1,22 @@
+server:
+   port: 10086
+#数据源
+druid:
+   url: jdbc:mysql://192.168.12.133:3306/admins?useUnicode=true&characterEncoding=utf8
+   username: young  
+   password: young
+#   oracle.jdbc.OracleDriver
+   driverClassName: com.mysql.jdbc.Driver 
+   initialSize: 3
+   maxActive: 150
+#配置SpringDataJpa
+spring:
+    jpa:
+      show-sql: true
+      open-in-view: true
+      properties:
+         hibernate:
+              dialect: org.hibernate.dialect.MySQL57Dialect
+              format_sql: true
+young:
+    name: 李跃东

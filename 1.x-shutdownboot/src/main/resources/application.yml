@@ -1,0 +1,23 @@
+server:
+    port:  10086
+#设置管理器
+management:
+   #管理器端口    
+    port:  10085
+   #管理器访问路径   
+    context-path: /manage
+   #开启用户名密码验证   
+    security:
+       enabled: true
+#开启指令停机
+endpoints:
+  shutdown:
+    path:   /godie
+    enabled: true
+#设置管理台用户名密码
+security:
+  basic:
+    enabled: true
+  user:
+    name: young
+    password: young

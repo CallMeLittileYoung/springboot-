@@ -1,0 +1,42 @@
+server:
+    port:  10087
+#设置管理器
+management:
+    #对单独末端进行设置
+    endpoint:
+        shutdown:
+           enabled: true
+    endpoints:
+        web:
+         #暴露出那些末端
+          exposure:
+                include: "*"
+          #去掉  acturator
+#          basePath: /lc
+#          path-mapping:
+#                  shutdown: godie
+#    server:
+#         port: 10085
+#         servlet:
+#              context-path: /manage
+spring:
+  application:
+           name: shutdown
+  boot:
+    admin:
+      client:
+        url:  http://localhost:10006
+  datasource:
+            url: jdbc:mysql://192.168.12.133:3306/admins?useUnicode=true&characterEncoding=utf8&useSSL=false
+            username: young
+            password: young
+            driverClassName: com.mysql.jdbc.Driver
+#加入mybatis  
+#mybatis:
+#     mapperLocations: classpath*:mappers/*Mapper.xml
+#     typeAliasesPackage: com.young.shutdown.entity
+#     configuration:
+#              mapUnderscoreToCamelCase: true     
+       
+          
+        

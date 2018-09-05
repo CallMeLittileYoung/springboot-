@@ -1,0 +1,85 @@
+#RabbitMQ配置文件
+rabbit : 
+   agent :
+        vhost : nap
+        userName: nap
+        password: 1q2w3e4r
+        urls    :  10.1.100.19:9096
+        exchangeName : E_NAP_SYNAGENTINFO
+        exchangeType : topic
+        routingKey   : R.NAP.SYNAGENTINFO
+   merchant :
+        vhost :   nap
+        userName: nap
+        password: 1q2w3e4r
+        urls    :  10.1.100.19:9096
+        exchangeName : E_NAP_SYNMCHTINFO
+        exchangeType : topic
+        routingKey   : R.NAP.SYNMCHTINFO
+   order :
+        vhost :  nap
+        userName: nap
+        password: 1q2w3e4r
+        urls    :  10.1.100.19:9096
+        exchangeName : E_NAP_SYNORDERINFO
+        exchangeType : topic
+        routingKey   : R.NAP.SYNORDERINFO
+spring:
+# Datasource
+  datasource:
+    url: jdbc:oracle:thin:@10.1.89.41:1521/mrmsvc
+    username: ghmrm
+    password: ghmrm
+
+# Dubbo provider
+  dubbo:
+    appname: topas-baseframework-provider
+    registry: zookeeper://127.0.0.1:2181
+    protocol: dubbo
+    port: 20801
+    threads: 500
+    version:
+    group:
+
+
+# ----------------------------------------
+# MYBATIS  PROPERTIES
+# ----------------------------------------
+
+# MyBatis
+mybatis:
+  type-aliases-package: com.icss.model
+  mapper-locations: classpath*:mappers/*.xml
+
+
+# ----------------------------------------
+# MAPPER  PROPERTIES
+# ----------------------------------------
+
+# MyBatis common mapper
+mapper:
+  mappers: tk.mybatis.mapper.common.Mapper
+  not-empty: false
+  identity: MYSQL
+
+
+# ----------------------------------------
+# PAGEHELPER  PROPERTIES
+# ----------------------------------------
+
+# MyBatis pagehelper
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+
+# ----------------------------------------
+# APPLICATION PROPERTIES
+# ----------------------------------------
+
+app:
+# Machine configuration
+  machine:
+    name: ProviderOne

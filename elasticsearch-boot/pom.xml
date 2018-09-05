@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.young</groupId>
+  <artifactId>elasticsearch-boot</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.3.RELEASE</version> 
+        <relativePath/>
+    </parent>
+   <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>  
+    
+    <dependencies>
+    	<dependency>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-starter-web</artifactId>
+    	</dependency>
+    	<!-- es启动器  -->
+    	<dependency>
+	        <groupId>org.springframework.data</groupId>
+	        <artifactId>spring-data-elasticsearch</artifactId>
+	        <version>3.0.2.RELEASE</version><!--$NO-MVN-MAN-VER$-->
+		</dependency>
+		<!-- spring-data-commons -->
+		<dependency>
+	        <groupId>org.springframework.data</groupId>
+	        <artifactId>spring-data-commons</artifactId>
+	        <version>2.0.2.RELEASE</version><!--$NO-MVN-MAN-VER$-->
+		</dependency>
+		<!-- 日志 -->
+		 <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.10.0</version><!--$NO-MVN-MAN-VER$-->
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.10.0</version><!--$NO-MVN-MAN-VER$-->
+        </dependency>
+    	<!-- 测试 -->
+    	<dependency>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-starter-test</artifactId>
+    	</dependency>
+    	<!-- mybatis -->
+    	 <dependency> 
+        	<groupId>tk.mybatis</groupId> 
+			<artifactId>mapper-spring-boot-starter</artifactId> 
+			<version>2.0.4</version> 
+	    </dependency>
+	    <dependency>
+		    <groupId>com.github.pagehelper</groupId>
+		    <artifactId>pagehelper</artifactId>
+		    <version>5.1.4</version>
+		</dependency>
+		 <dependency>
+        	<groupId>mysql</groupId>
+        	<artifactId>mysql-connector-java</artifactId>
+        	<version>8.0.11</version>
+        	<!--$NO-MVN-MAN-VER$-->
+        </dependency>
+    	<!-- <dependency>
+   			 <groupId>de.codecentric</groupId>
+    		<artifactId>spring-boot-admin-starter-client</artifactId>
+    		<version>2.0.1</version>
+		</dependency> -->
+        <!-- <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+        </dependency> -->
+    </dependencies>
+</project>

@@ -1,0 +1,26 @@
+#rabbitMQ的配置文件
+rabbit : 
+      agent :
+            vhost : nap
+            userName: nap
+            password: 1q2w3e4r
+            urls    :  10.1.100.19:9096
+            exchangeName : E_NAP_SYNAGENTINFO
+            exchangeType : topic
+            routingKey   : R.NAP.SYNAGENTINFO
+      merchant :
+            vhost :   nap
+            userName: nap
+            password: 1q2w3e4r
+            urls    :  10.1.100.19:9096
+            exchangeName : E_NAP_SYNMCHTINFO
+            exchangeType : topic
+            routingKey   : R.NAP.SYNMCHTINFO
+      order :
+            vhost :  nap
+            userName: nap
+            password: 1q2w3e4r
+            urls    :  10.1.100.19:9096
+            exchangeName : E_NAP_SYNORDERINFO
+            exchangeType : topic
+            routingKey   : R.NAP.SYNORDERINFO
